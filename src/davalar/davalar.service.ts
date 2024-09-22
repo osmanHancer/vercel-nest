@@ -16,7 +16,7 @@ export class DavalarService {
   async create(createDavalarDto: CreateDavalarDto) {
     console.log(createDavalarDto);
     const date = new Date(createDavalarDto.baslamaTarihi);
-    let hours=date.getHours()-3;
+    let hours=date.getHours()-6;
     date.setHours(hours);
     const baslamaTarihi = date.toISOString();
     const dava = this.davaRepository.create(createDavalarDto);

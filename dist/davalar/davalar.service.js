@@ -22,8 +22,18 @@ let DavalarService = class DavalarService {
         this.davaRepository = davaRepository;
     }
     async create(createDavalarDto) {
+        console.log(createDavalarDto);
+        const date = new Date(createDavalarDto.baslamaTarihi);
+        let hours = date.getHours() - 6;
+        date.setHours(hours);
+        const baslamaTarihi = date.toISOString();
         const dava = this.davaRepository.create(createDavalarDto);
-        await this.davaRepository.insert(dava);
+        const updateDava = {
+            ...dava,
+            baslamaTarihi,
+        };
+        console.log(updateDava);
+        await this.davaRepository.insert(updateDava);
         return dava;
     }
     async findAll() {

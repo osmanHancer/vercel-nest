@@ -6,7 +6,7 @@ async function bootstrap() {
   // Zaman dilimini UTC olarak ayarlayın
 
   const app = await NestFactory.create(AppModule, { bodyParser: true });
-  
+  app.enableCors(); // CORS hatalarını önlemek için
   // Global validation pipe ekleyin
   app.useGlobalPipes(new ValidationPipe({
     transform: true, // Dönüşüm yapılabilmesi için bu ayarı ekleyin

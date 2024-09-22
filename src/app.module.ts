@@ -4,7 +4,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './users/user.module';
 import { DavalarModule } from './davalar/davalar.module';
-import { DavaModule } from './dava/dava.module';
 
 
 

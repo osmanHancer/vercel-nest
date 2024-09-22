@@ -52,7 +52,6 @@ export class UserController {
   @Post('unknown-password-mail')
   async unkownpasswmail(@Body() data: any) {
     const subject = 'Şifre Sıfırlama Kodunuz';
-
     try {
       await this.mailService.sendEmail(data.email, subject, data.text);
       return { message: 'Şifre sıfırlama e-postası gönderildi.' };

@@ -5,22 +5,8 @@ import { ValidationPipe } from '@nestjs/common';
 async function bootstrap() {
   // Zaman dilimini UTC olarak ayarlayın
 
-  const app = await NestFactory.create(AppModule, { bodyParser: true });
+  const app = await NestFactory.create(AppModule);
   app.enableCors(); // CORS hatalarını önlemek için
-  // Global validation pipe ekleyin
-  app.useGlobalPipes(new ValidationPipe({
-    transform: true, // Dönüşüm yapılabilmesi için bu ayarı ekleyin
-  }));
-  
-  // CORS ayarları
-  app.enableCors({
-    origin: '*',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    preflightContinue: false,
-    optionsSuccessStatus: 204
-  });
-  
-  // Sunucuyu 3000 portunda başlatın
   await app.listen(3000);
 }
 

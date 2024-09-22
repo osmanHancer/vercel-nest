@@ -15,7 +15,7 @@ import { DavalarModule } from './davalar/davalar.module';
 		"username": "avnadmin",
 		"password": "AVNS_UvV-Ign5rZP5i099-PL",
 		"database": "test",
-		  timezone: "Z",
+		  timezone: "-03:00",
 		"synchronize": true,
 		ssl: {
 			rejectUnauthorized: true,

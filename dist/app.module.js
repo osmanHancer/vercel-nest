@@ -25,7 +25,7 @@ exports.AppModule = AppModule = __decorate([
                 "username": "avnadmin",
                 "password": "AVNS_UvV-Ign5rZP5i099-PL",
                 "database": "test",
-                timezone: "Z",
+                "timezone": "UTC+3",
                 "synchronize": true,
                 ssl: {
                     rejectUnauthorized: true,

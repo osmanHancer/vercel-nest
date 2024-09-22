@@ -51,6 +51,9 @@ export class UserController {
   }
   @Post('unknown-password-mail')
   async unkownpasswmail(@Body() data: any) {
+
+    let user =await this.usersService.findmail(data.email)
+    if(user){
     const subject = 'Şifre Sıfırlama Kodunuz';
     try {
       await this.mailService.sendEmail(data.email, subject, data.text);
@@ -58,6 +61,13 @@ export class UserController {
     } catch (error) {
       return { message: 'E-posta gönderilemedi.', error };
     }
+    
+  }
+  else{
+    return {
+      message: 'Kullanıcı Bulunamdı',
+    };
+  }
   }
   @Post('unknown-password')
   async unkownpassw(@Body() data: any) {

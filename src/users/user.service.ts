@@ -155,5 +155,13 @@ export class UserService {
     };
   }
 
+ async findmail(mail:string){
+
+  const user = await this.usersRepository.findOne({ where: { mail } });
+
+  return user!=null ? true:false;
+
+  }
+
 
 }

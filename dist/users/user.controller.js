@@ -40,13 +40,21 @@ let UserController = class UserController {
         return this.usersService.delete(createCreateuserDto);
     }
     async unkownpasswmail(data) {
-        const subject = 'Şifre Sıfırlama Kodunuz';
-        try {
-            await this.mailService.sendEmail(data.email, subject, data.text);
-            return { message: 'Şifre sıfırlama e-postası gönderildi.' };
+        let user = await this.usersService.findmail(data.email);
+        if (user) {
+            const subject = 'Şifre Sıfırlama Kodunuz';
+            try {
+                await this.mailService.sendEmail(data.email, subject, data.text);
+                return { message: 'Şifre sıfırlama e-postası gönderildi.' };
+            }
+            catch (error) {
+                return { message: 'E-posta gönderilemedi.', error };
+            }
         }
-        catch (error) {
-            return { message: 'E-posta gönderilemedi.', error };
+        else {
+            return {
+                message: 'Kullanıcı Bulunamdı',
+            };
         }
     }
     async unkownpassw(data) {

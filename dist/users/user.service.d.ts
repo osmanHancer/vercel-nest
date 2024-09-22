@@ -35,4 +35,5 @@ export declare class UserService {
         message: string;
         user: UserEntity;
     }>;
+    findmail(mail: string): Promise<boolean>;
 }

@@ -121,6 +121,10 @@ let UserService = class UserService {
             user,
         };
     }
+    async findmail(mail) {
+        const user = await this.usersRepository.findOne({ where: { mail } });
+        return user != null ? true : false;
+    }
 };
 exports.UserService = UserService;
 exports.UserService = UserService = __decorate([

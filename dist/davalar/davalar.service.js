@@ -40,8 +40,21 @@ let DavalarService = class DavalarService {
         await this.davaRepository.save(dava);
         return dava;
     }
-    remove(id) {
-        return `This action removes a #${id} davalar`;
+    async remove(id) {
+        const dava = await this.davaRepository.findOne({ where: { id: id } });
+        if (!dava) {
+            throw new common_1.NotFoundException(`${id} numaralı dava bulunamadı.`);
+        }
+        try {
+            const result = await this.davaRepository.delete(id);
+            if (result.affected === 0) {
+                throw new common_1.NotFoundException(`${id} numaralı dava silinemedi.`);
+            }
+        }
+        catch (error) {
+            console.error('Silme Hatası:', error);
+            throw new common_1.InternalServerErrorException('Dava silinirken bir hata oluştu.');
+        }
     }
 };
 exports.DavalarService = DavalarService;

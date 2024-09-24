@@ -8,5 +8,5 @@ export declare class DavalarService {
     findAll(): Promise<DavalarEntity[]>;
     findOne(mail: string): Promise<DavalarEntity[]>;
     update(id: number, updateDavalarDto: CreateDavalarDto): Promise<DavalarEntity>;
-    remove(id: number): string;
+    remove(id: number): Promise<void>;
 }

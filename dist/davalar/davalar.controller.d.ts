@@ -7,5 +7,5 @@ export declare class DavalarController {
     findAll(): Promise<import("./davalar.entity").DavalarEntity[]>;
     findOne(mail: string): Promise<import("./davalar.entity").DavalarEntity[]>;
     update(id: string, updateDavalarDto: CreateDavalarDto): Promise<import("./davalar.entity").DavalarEntity>;
-    remove(id: string): string;
+    remove(id: string): Promise<void>;
 }

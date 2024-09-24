@@ -50,6 +50,10 @@ let DavalarService = class DavalarService {
             if (result.affected === 0) {
                 throw new common_1.NotFoundException(`${id} numaralı dava silinemedi.`);
             }
+            return {
+                statusCode: common_1.HttpStatus.OK,
+                message: 'Kullanıcı Silindi',
+            };
         }
         catch (error) {
             console.error('Silme Hatası:', error);

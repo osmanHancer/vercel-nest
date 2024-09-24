@@ -1,3 +1,4 @@
+import { HttpStatus } from '@nestjs/common';
 import { CreateDavalarDto } from './create-davalar.dto';
 import { DavalarEntity } from './davalar.entity';
 import { Repository } from 'typeorm';
@@ -8,5 +9,8 @@ export declare class DavalarService {
     findAll(): Promise<DavalarEntity[]>;
     findOne(mail: string): Promise<DavalarEntity[]>;
     update(id: number, updateDavalarDto: CreateDavalarDto): Promise<DavalarEntity>;
-    remove(id: number): Promise<void>;
+    remove(id: number): Promise<{
+        statusCode: HttpStatus;
+        message: string;
+    }>;
 }

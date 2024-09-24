@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, InternalServerErrorException, NotFoundException } from '@nestjs/common';
 import { CreateDavalarDto } from './create-davalar.dto';
 import { DavalarEntity } from './davalar.entity';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -39,7 +39,20 @@ export class DavalarService {
 
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} davalar`;
+  async remove(id: number): Promise<void> {
+    const dava = await this.davaRepository.findOne({ where: { id: id } });
+    if (!dava) {
+      throw new NotFoundException(`${id} numaralı dava bulunamadı.`);
+    }
+
+    try {
+      const result = await this.davaRepository.delete(id);
+      if (result.affected === 0) {
+        throw new NotFoundException(`${id} numaralı dava silinemedi.`);
+      }
+    } catch (error) {
+      console.error('Silme Hatası:', error);
+      throw new InternalServerErrorException('Dava silinirken bir hata oluştu.');
+    }
   }
 }

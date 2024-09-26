@@ -14,6 +14,7 @@ export declare class UserController {
         surname: string;
         createdAt: Date;
         updatedAt: Date;
+        imgname: string;
     }>;
     updatemail(createCreateuserDto: any): Promise<import("./user.entity").UserEntity>;
     updatename(createCreateuserDto: any): Promise<import("./user.entity").UserEntity>;
@@ -30,6 +31,7 @@ export declare class UserController {
         message: string;
         user: import("./user.entity").UserEntity;
     }>;
+    img(data: any): Promise<import("./user.entity").UserEntity>;
     readAllUsers(): Promise<{
         statusCode: HttpStatus;
         message: string;

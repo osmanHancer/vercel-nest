@@ -13,6 +13,7 @@ const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const user_module_1 = require("./users/user.module");
 const davalar_module_1 = require("./davalar/davalar.module");
+const fileupload_module_1 = require("./fileupload/fileupload.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -59,7 +60,7 @@ hRIBCuCMNIAJkLlmC5y2aXomBRLyR/au1BnriN9sabitE7HcGw==
                 cache: {
                     duration: 60000
                 }
-            }), user_module_1.UserModule, davalar_module_1.DavalarModule],
+            }), user_module_1.UserModule, davalar_module_1.DavalarModule, fileupload_module_1.FileuploadModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })

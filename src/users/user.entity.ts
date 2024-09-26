@@ -21,4 +21,8 @@ export class UserEntity {
   @Column()
   hashedPassword: string;
 
+  @Column({ nullable: true })
+  imgname: string | null;
+  
+
 }

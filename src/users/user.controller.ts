@@ -75,6 +75,12 @@ export class UserController {
     return this.usersService.unkownPassword(data.mail, data.newpassw);
 
   }
+  @Post('img')
+  async img(@Body() data: any) {
+    console.log(data);
+    return this.usersService.imgName(data);
+
+  }
 
   @Get()
   async readAllUsers() {

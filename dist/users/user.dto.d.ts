@@ -5,4 +5,5 @@ export declare class UserDTO {
     hashedPassword: string;
     createdAt: Date;
     updatedAt: Date;
+    imgname: string | null;
 }

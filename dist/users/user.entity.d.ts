@@ -5,4 +5,5 @@ export declare class UserEntity {
     createdAt: Date;
     updatedAt: Date;
     hashedPassword: string;
+    imgname: string | null;
 }

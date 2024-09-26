@@ -15,5 +15,7 @@ export class UserDTO {
 
   updatedAt: Date;
 
+  imgname: string | null;
+
 
   }

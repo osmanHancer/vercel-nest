@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './users/user.module';
 import { DavalarModule } from './davalar/davalar.module';
+import { FileuploadModule } from './fileupload/fileupload.module';
 
 
 
@@ -50,7 +51,7 @@ hRIBCuCMNIAJkLlmC5y2aXomBRLyR/au1BnriN9sabitE7HcGw==
 		cache: {
 			duration: 60000 // 60 saniye boyunca cache'le
 		}
-	}), UserModule, DavalarModule],
+	}), UserModule, DavalarModule,FileuploadModule],
 	controllers: [AppController],
 	providers: [AppService],
 })

@@ -14,6 +14,7 @@ export declare class UserService {
         surname: string;
         createdAt: Date;
         updatedAt: Date;
+        imgname: string;
     }>;
     updateMail(data: {
         oldMail: string;
@@ -23,6 +24,10 @@ export declare class UserService {
         mail: string;
         name: string;
         surname: string;
+    }): Promise<UserEntity>;
+    imgName(data: {
+        mail: string;
+        imgname: string;
     }): Promise<UserEntity>;
     readAll(): Promise<UserEntity[]>;
     findOne(mail: string, passw: string): Promise<{

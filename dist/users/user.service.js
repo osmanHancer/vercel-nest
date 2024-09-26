@@ -80,6 +80,15 @@ let UserService = class UserService {
         await this.usersRepository.save(user);
         return user;
     }
+    async imgName(data) {
+        const user = await this.usersRepository.findOne({ where: { mail: data.mail } });
+        if (!user) {
+            throw new Error('Kullanıcı bulunamadı.');
+        }
+        user.imgname = data.imgname;
+        await this.usersRepository.save(user);
+        return user;
+    }
     async readAll() {
         return await this.usersRepository.find();
     }

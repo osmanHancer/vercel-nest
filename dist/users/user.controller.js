@@ -61,6 +61,10 @@ let UserController = class UserController {
         console.log(data);
         return this.usersService.unkownPassword(data.mail, data.newpassw);
     }
+    async img(data) {
+        console.log(data);
+        return this.usersService.imgName(data);
+    }
     async readAllUsers() {
         const users = await this.usersService.readAll();
         return {
@@ -120,6 +124,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", Promise)
 ], UserController.prototype, "unkownpassw", null);
+__decorate([
+    (0, common_1.Post)('img'),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", Promise)
+], UserController.prototype, "img", null);
 __decorate([
     (0, common_1.Get)(),
     __metadata("design:type", Function),

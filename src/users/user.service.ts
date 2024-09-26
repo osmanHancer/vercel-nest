@@ -97,6 +97,22 @@ export class UserService {
 
     return user;
   }
+  async imgName(data: { mail: string, imgname: string }) {
+    // E-posta adresine göre kullanıcıyı bul
+    const user = await this.usersRepository.findOne({ where: { mail: data.mail } });
+
+    if (!user) {
+      throw new Error('Kullanıcı bulunamadı.');
+    }
+
+    // Kullanıcının adını ve soyadını güncelle
+    user.imgname = data.imgname;
+
+    // Güncellenen kullanıcıyı kaydet
+    await this.usersRepository.save(user);
+
+    return user;
+  }
 
   async readAll() {
 

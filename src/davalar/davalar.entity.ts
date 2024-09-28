@@ -6,17 +6,32 @@ export class DavalarEntity {
   id: number;
 
   @Column()
-  dosyaNo: string;
+  esasNo: string;
 
   @Column()
   mail: string;
 
   // Davacı Bilgileri
   @Column()
+  davaciVekilAdi: string;
+
+  @Column()
+  davaciVekilSoyadi: string;
+
+  @Column()
+  davaciVekilTc: string;
+
+  @Column()
+  davaciVekilAdres: string;
+
+  @Column()
   davaciAdi: string;
 
   @Column()
   davaciSoyadi: string;
+
+  @Column()
+  davaciTc: string;
 
   @Column()
   davaciAdresi: string;
@@ -29,10 +44,26 @@ export class DavalarEntity {
 
   // Davalı Bilgileri
   @Column()
+  davaliVekilAdi: string;
+
+  @Column()
+  davaliVekilSoyadi: string;
+
+  @Column()
+  davaliVekilTc: string;
+
+  
+  @Column()
+  davaliVekilAdres: string;
+
+  @Column()
   davaliAdi: string;
 
   @Column()
   davaliSoyadi: string;
+
+  @Column()
+  davaliTc: string;
 
   @Column()
   davaliAdresi: string;
@@ -48,16 +79,25 @@ export class DavalarEntity {
   genelBilgiler: string;
 
   @Column()
+  mahkemeAsamasi: string;
+
+  @Column()
   il: string;
 
-  @Column({ type: 'datetime', nullable: true })
-  baslamaTarihi: Date;
+  @Column()
+  ilce: string;
+
+  @Column()
+  count: string;
 
   @Column()
   gorevliMahkeme: string;
 
-  @Column()
-  davaAsamasi: string;
+  @Column({ type: 'datetime', nullable: true })
+  baslamaTarihi: Date;
+
+  @Column({ type: 'datetime', nullable: true })
+  durusmaTarihi: Date;
 
   @Column()
   notlar: string;

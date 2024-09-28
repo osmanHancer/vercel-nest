@@ -1,51 +1,103 @@
 export class CreateDavalarDto {
-
     id: number;
+  
 
+    esasNo: string;
   
-    dosyaNo: string;
-  
+
     mail: string;
   
     // Davacı Bilgileri
+
+    davaciVekilAdi: string;
   
+
+    davaciVekilSoyadi: string;
+  
+
+    davaciVekilTc: string;
+  
+
+    davaciVekilAdres: string;
+  
+
     davaciAdi: string;
   
+
     davaciSoyadi: string;
   
+
+    davaciTc: string;
+  
+
     davaciAdresi: string;
   
+
     davaciIletisim: string;
   
+
     davaciMeslegi: string;
   
     // Davalı Bilgileri
+
+    davaliVekilAdi: string;
   
+
+    davaliVekilSoyadi: string;
+  
+
+    davaliVekilTc: string;
+  
+    
+
+    davaliVekilAdres: string;
+  
+
     davaliAdi: string;
   
+
     davaliSoyadi: string;
   
+
+    davaliTc: string;
+  
+
     davaliAdresi: string;
   
+
     davaliIletisim: string;
   
+
     davaliMeslegi: string;
   
     // Genel Bilgiler
-  
+
     genelBilgiler: string;
   
-    il: string;
-    
-    baslamaTarihi: Date;
+
+    mahkemeAsamasi: string;
   
+
+    il: string;
+  
+
+    ilce: string;
+  
+
+    count: string;
+  
+
     gorevliMahkeme: string;
   
-    davaAsamasi: string;
+    baslamaTarihi: Date;
   
+    durusmaTarihi: Date;
+  
+
     notlar: string;
   
     // Diğer Özellikler (isteğe bağlı)
-    createdAt: Date;
     updatedAt: Date;
+  
+    createdAt: Date;
 }

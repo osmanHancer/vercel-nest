@@ -21,11 +21,27 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
-], DavalarEntity.prototype, "dosyaNo", void 0);
+], DavalarEntity.prototype, "esasNo", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], DavalarEntity.prototype, "mail", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaciVekilAdi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaciVekilSoyadi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaciVekilTc", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaciVekilAdres", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
@@ -34,6 +50,10 @@ __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], DavalarEntity.prototype, "davaciSoyadi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaciTc", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
@@ -49,11 +69,31 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
+], DavalarEntity.prototype, "davaliVekilAdi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaliVekilSoyadi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaliVekilTc", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaliVekilAdres", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
 ], DavalarEntity.prototype, "davaliAdi", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], DavalarEntity.prototype, "davaliSoyadi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "davaliTc", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
@@ -73,19 +113,31 @@ __decorate([
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
+], DavalarEntity.prototype, "mahkemeAsamasi", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
 ], DavalarEntity.prototype, "il", void 0);
 __decorate([
-    (0, typeorm_1.Column)({ type: 'datetime', nullable: true }),
-    __metadata("design:type", Date)
-], DavalarEntity.prototype, "baslamaTarihi", void 0);
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "ilce", void 0);
+__decorate([
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", String)
+], DavalarEntity.prototype, "count", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)
 ], DavalarEntity.prototype, "gorevliMahkeme", void 0);
 __decorate([
-    (0, typeorm_1.Column)(),
-    __metadata("design:type", String)
-], DavalarEntity.prototype, "davaAsamasi", void 0);
+    (0, typeorm_1.Column)({ type: 'datetime', nullable: true }),
+    __metadata("design:type", Date)
+], DavalarEntity.prototype, "baslamaTarihi", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: 'datetime', nullable: true }),
+    __metadata("design:type", Date)
+], DavalarEntity.prototype, "durusmaTarihi", void 0);
 __decorate([
     (0, typeorm_1.Column)(),
     __metadata("design:type", String)

@@ -8,6 +8,7 @@ export class DavalarController {
 
   @Post('/insert')
   create(@Body() createDavalarDto: CreateDavalarDto) {
+    console.log(createDavalarDto);
     return this.davalarService.create(createDavalarDto);
   }
 

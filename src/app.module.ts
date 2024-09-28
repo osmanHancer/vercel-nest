@@ -16,6 +16,7 @@ import { FileuploadModule } from './fileupload/fileupload.module';
 		"username": "avnadmin",
 		"password": "AVNS_UvV-Ign5rZP5i099-PL",
 		"database": "test",
+		"timezone":"Z",
 		"synchronize": true,
 		ssl: {
 			rejectUnauthorized: true,
